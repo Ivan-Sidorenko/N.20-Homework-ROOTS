@@ -5,14 +5,14 @@
     function squareRoots(a,b,c) {
         var d=b*b-4*a*c; // дискриминант
 
+        if ( a===0 ) // линейное уравнение
+        return [ -c/b ];
+
         if ( d<0 )
             return []; // нет корней
 
         if ( d==0 )
             return [ -b/(2*a) ]; // один корень
-
-        if ( a==0 ) // линейное уравнение
-            return [ -c/b ];
 
         var x1=(-b+Math.sqrt(d))/(2*a);
         var x2=(-b-Math.sqrt(d))/(2*a);
